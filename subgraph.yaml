@@ -24,4 +24,4 @@ dataSources:
           handler: handleDepositMade
         - event: TokenIndexed(indexed address,indexed uint256)
           handler: handleTokenIndexed
-      file: ./src/fuel-v-1.ts
+      file: ./src/fuel-v1.ts

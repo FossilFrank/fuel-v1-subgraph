@@ -8,11 +8,7 @@ type DepositMade @entity(immutable: true) {
   transactionHash: Bytes!
 }
 
-type TokenIndexed @entity(immutable: true) {
-  id: Bytes!
+type Token @entity(immutable: true) {
+  id: String!
   token: Bytes! # address
-  id: BigInt! # uint256
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
 }
