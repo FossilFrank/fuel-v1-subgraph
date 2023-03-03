@@ -1,14 +1,18 @@
 type DepositMade @entity(immutable: true) {
   id: Bytes!
   owner: Bytes! # address
-  token: BigInt! # uint32
-  value: BigInt! # uint256
+  token: Token! # uint32
+  value: BigDecimal! # uint256
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
 
-type Token @entity(immutable: true) {
+type Token @entity {
   id: String!
   token: Bytes! # address
+  name: String
+  symbol: String
+  decimals: Int!
+  amountDeposited: BigDecimal!
 }
